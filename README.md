@@ -16,11 +16,9 @@ To work in a sandboxed Python environment it is recommended to install the app i
 2. Setup a Redis  
 
   ```bash
-brew install redis
-
-start Redis server using configuration file
-
-redis-server
+    brew install redis
+    start Redis server using configuration file
+    redis-server
 
 ```
 3. Run server in development environment
@@ -37,6 +35,8 @@ redis-server
    $ pip install gunicorn
    $ gunicorn --bind 0.0.0.0:5000 wsgi:app
    ```
+   To set up nginx to proxy requests and configuring system ctl files follow the steps mentioned here [nginx-gunicorn](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04).
+   
 5. TCP-KeepAlive for better performance
 
    ```bash
@@ -44,7 +44,6 @@ redis-server
    # Update the value to 0
     tcp-keepalive 0
    ```
-   To set up nginx to proxy requests and configuring system ctl files follow the steps mentioned here [nginx-gunicorn](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04).
 
 ## Project Structure
 
