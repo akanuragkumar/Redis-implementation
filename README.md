@@ -14,7 +14,7 @@ To work in a sandboxed Python environment it is recommended to install the app i
 2. Setup a Redis  
 
   ```Mongodb
-rew install redis
+brew install redis
 
 start Redis server using configuration file
 
