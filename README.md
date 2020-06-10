@@ -35,7 +35,7 @@ redis-server
    $ pip install gunicorn
    $ gunicorn --bind 0.0.0.0:5000 wsgi:app
    ```
-   To set up nginx to proxy requests and configuring system ctl files follow the steps mentioned here [nginx-gunicorn]         (https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04).
+   To set up nginx to proxy requests and configuring system ctl files follow the steps mentioned here [nginx-gunicorn](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04).
 
 ## Project Structure
 
