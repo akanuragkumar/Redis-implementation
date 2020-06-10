@@ -54,109 +54,118 @@ assignment_redis
 ### `set` 
 
 1. `POST /set` 
+Set the value at key name to value
 
 ```json
  application/json - {"key":"key", "value":"value"}
 ```
 ### `get` 
 2. `GET /get` 
+Return the value at key name, or error if the key doesn't exist
 
 ```json
  application/json - {"key":"key"}
 ```
 ### `delete` 
 3. `POST /delete` 
-
+Delete one or more keys specified by names
 ```json
  application/json - {"key":"key"}
 ```
 ### `expire` 
 4. `POST /expire` 
-
+Set an expire flag on key name for time seconds. time can be represented by an integer or a Python timedelta object.
 ```json
  application/json - {"key":"key", "expiry":"expiry"}
 ```
 ### `keys` 
 5. `POST /keys` 
-
+Returns a list of keys matching pattern
 ```json
  application/json - {"key":"key"}
 ```
 ### `pttl` 
 6. `POST /pttl` 
-
+Returns the number of milliseconds until the key name will expire
 ```json
  application/json - {"key":"key"}
 ```
 ### `zadd` 
 7. `POST /zadd` 
-
+Set any number of element-name, score pairs to the key name.
 ```json
  application/json - {"set_name":"set_name","difficulty_level":"difficulty_level","element":"element"}
 ```
 ### `zrange` 
 8. `POST /zrange?withscores=True` 
-
+Return a range of values from sorted set name between start and end sorted in ascending order.
+start and end can be negative, indicating the end of the range.
+desc a boolean indicating whether to sort the results descendingly
+withscores indicates to return the scores along with the values. The return type is a list of (value, score) pairs
 ```json
  application/json - {"set_name":"set_name","start":"start","end":"end"}
 ```
 ### `zrank` 
 9. `POST /zrank` 
-
+Returns a 0-based value indicating the rank of value in sorted set name
 ```json
  application/json - {"set_name":"set_name","element":"element"}
 ```
 ### `smembers` 
 10. `POST /smembers` 
+Return all members of the set name
 
 ```json
  application/json - {"set_name":"set_name"}
 ``` 
 ### `flushdb` 
 11. `POST /flushdb`
+Delete all keys in the current database
 
 ### `hmset` 
 12. `POST /hmset` 
-
+Sets each key in the mapping dict to its corresponding value in the hash name
 ```json
  application/json - {"key":"key","hash":{"Question":"what is photosynthesis", "answer":"sun", "exam":"upsc", "year":"2019"}}
 ``` 
 ### `hgetall` 
 13. `POST /hgetall` 
-
+Return a Python dict of the hash's name/value pairs
 ```json
  application/json - {"key":"key"}
 ``` 
 ### `rename` 
 14. `POST /rename` 
-
+Rename key src to dst
 ```json
  application/json - {"old_key":"old_key","new_key":"new_key"}
 ``` 
 ### `lpush` 
 15. `POST /lpush` 
-
+Push values onto the head of the list name
 ```json
  application/json - {"list_name":"list_name","key":"key"}
 ``` 
 ### `lpop` 
 16. `POST /lpop` 
+Remove and return the first item of the list name
 
 ### `lindex` 
 17. `POST /lindex` 
-
+Return the item from list name at position index
+Negative indexes are supported and will return an item at the end of the list
 ```json
  application/json - {"list_name":"list_name","index":"index"}
  ``` 
  ### `llen` 
  18. `POST /llen` 
-
+Return the length of the list name
 ```json
  application/json - {"list_name":"list_name"}
  ``` 
  ### `pipeline_example` 
   19. `POST /pipeline_example` 
-
+Return a new pipeline object that can queue multiple commands for later execution. transaction indicates whether all commands should be executed atomically. Apart from making a group of operations atomic, pipelines are useful for reducing the back-and-forth overhead between the client and server.
 ```json
  application/json - {"keys":[key1,key2,...]}
  ``` 
