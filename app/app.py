@@ -19,7 +19,6 @@ def set():
 		pass
 	else: 
 		return jsonify(error)
-		
 	key = data['key']	
 	value = data['value']
 	resp = r.set(key, value)
