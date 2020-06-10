@@ -108,7 +108,7 @@ Time complexity: O(1)
 Set any number of element-name, score pairs to the key name\
 Time complexity: O(log(N)) where N is the number of elements in the set
 ```json
- application/json - {"set_name":"set_name","difficulty_level":"difficulty_level","element":"element"}
+ application/json - {"set_name":"set_name","score":"score","element":"element"}
 ```
 ### `zrange` 
 8. `POST /zrange?withscores=True` 
