@@ -31,7 +31,7 @@ redis-server
 
    View at http://127.0.0.1:5000
    
-4. Prod level server using Nginx, Gunicorn, Uwsgi
+4. Production level server using dedicated WSGI server Gunicorn,for multi-threaded operations behind a reverse proxy Nginx.
 
    ```bash
    $ pip install gunicorn
