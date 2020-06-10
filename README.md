@@ -56,8 +56,7 @@ assignment_redis
 ### `set` 
 
 1. `POST /set` 
-Set the value at key name to value
-<br />
+Set the value at key name to value\
 Time complexity: O(1)
 
 ```json
