@@ -1,5 +1,7 @@
 # Assignment_redis
 
+## [Link for assignment questions](https://github.com/akanuragkumar/assignment_redis/blob/master/assignment_questions.pdf)
+
 ## Quickstart
 
 To work in a sandboxed Python environment it is recommended to install the app in a Python [virtualenv](https://pypi.python.org/pypi/virtualenv).
