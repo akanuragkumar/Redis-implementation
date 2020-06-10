@@ -132,13 +132,13 @@ assignment_redis
 ```json
  application/json - {"list_name":"list_name","index":"index"}
  ``` 
- 16. `POST /llen` 
+ 17. `POST /llen` 
 
 ```json
  application/json - {"list_name":"list_name"}
  ``` 
-  16. `POST /pipeline_example` 
+  18. `POST /pipeline_example` 
 
 ```json
- application/json - {"key":[key1,key2,...]}
+ application/json - {"keys":[key1,key2,...]}
  ``` 
