@@ -14,9 +14,9 @@ To work in a sandboxed Python environment it is recommended to install the app i
 2. Setup a Redis  
 
   ```Mongodb
-brew install redis
+rew install redis
 
-Start Redis server using configuration file
+start Redis server using configuration file
 
 redis-server
 
@@ -29,7 +29,7 @@ redis-server
 
    View at http://127.0.0.1:5000
    
-4. Prod level server using Nginx, Gunicorn, Uswsgi
+4. Prod level server using Nginx, Gunicorn, Uwsgi
 
    ```bash
    $ pip install gunicorn
