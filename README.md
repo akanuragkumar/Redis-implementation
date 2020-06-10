@@ -58,86 +58,104 @@ assignment_redis
 ```json
  application/json - {"key":"key", "value":"value"}
 ```
+### `get` 
 2. `GET /get` 
 
 ```json
  application/json - {"key":"key"}
 ```
+### `delete` 
 3. `POST /delete` 
 
 ```json
  application/json - {"key":"key"}
 ```
+### `expire` 
 4. `POST /expire` 
 
 ```json
  application/json - {"key":"key", "expiry":"expiry"}
 ```
+### `keys` 
 5. `POST /keys` 
 
 ```json
  application/json - {"key":"key"}
 ```
+### `pttl` 
 6. `POST /pttl` 
 
 ```json
  application/json - {"key":"key"}
 ```
+### `zadd` 
 7. `POST /zadd` 
 
 ```json
  application/json - {"set_name":"set_name","difficulty_level":"difficulty_level","element":"element"}
 ```
+### `zrange` 
 8. `POST /zrange?withscores=True` 
 
 ```json
  application/json - {"set_name":"set_name","start":"start","end":"end"}
 ```
+### `zrank` 
 9. `POST /zrank` 
 
 ```json
  application/json - {"set_name":"set_name","element":"element"}
 ```
+### `smembers` 
 10. `POST /smembers` 
 
 ```json
  application/json - {"set_name":"set_name"}
 ``` 
-10. `POST /flushdb` 
+### `flushdb` 
+11. `POST /flushdb`
 
-11. `POST /hmset` 
+### `hmset` 
+12. `POST /hmset` 
 
 ```json
  application/json - {"key":"key","hash":{"Question":"what is photosynthesis", "answer":"sun", "exam":"upsc", "year":"2019"}}
 ``` 
-12. `POST /hgetall` 
+### `hgetall` 
+13. `POST /hgetall` 
 
 ```json
  application/json - {"key":"key"}
 ``` 
-13. `POST /rename` 
+### `rename` 
+14. `POST /rename` 
 
 ```json
  application/json - {"old_key":"old_key","new_key":"new_key"}
 ``` 
-14. `POST /lpush` 
+### `lpush` 
+15. `POST /lpush` 
 
 ```json
  application/json - {"list_name":"list_name","key":"key"}
 ``` 
-15. `POST /lpop` 
+### `lpop` 
+16. `POST /lpop` 
 
-16. `POST /lindex` 
+### `lindex` 
+17. `POST /lindex` 
 
 ```json
  application/json - {"list_name":"list_name","index":"index"}
  ``` 
- 17. `POST /llen` 
+ ### `llen` 
+ 18. `POST /llen` 
 
 ```json
  application/json - {"list_name":"list_name"}
  ``` 
-  18. `POST /pipeline_example` 
+ ### `pipeline_example` 
+  19. `POST /pipeline_example` 
 
 ```json
  application/json - {"keys":[key1,key2,...]}
