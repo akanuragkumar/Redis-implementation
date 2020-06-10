@@ -99,14 +99,14 @@ def pttl():
 @app.route("/zadd", methods=["POST"])
 def zadd():
 	data = request.json
-	if request.json and ({"set_name", "difficulty_level", "element"} <= data.keys()):
+	if request.json and ({"set_name", "score", "element"} <= data.keys()):
 		pass
 	else: 
 		return jsonify(error)		
 	set_name = data['set_name']
-	difficulty_level = data['difficulty_level']
+	score = data['score']
 	element = data['element']
-	dict = {element : difficulty_level}
+	dict = {element : score}
 	resp = r.zadd(set_name, dict)
 	return jsonify(resp)   
 
@@ -114,7 +114,7 @@ def zadd():
 @app.route("/zrange", methods=["POST"])
 def zrange():
 	data = request.json
-	if request.json and ({"set_name", "difficulty_level", "element"} <= data.keys()):
+	if request.json and ({"set_name", "start", "end"} <= data.keys()):
 		pass
 	else: 
 		return jsonify(error)	
