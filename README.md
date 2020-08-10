@@ -1,4 +1,4 @@
-# Assignment_redis
+# Redis-implementation
 
 ## [Link for assignment questions](https://github.com/akanuragkumar/assignment_redis/blob/master/assignment_questions.pdf)
 
@@ -9,7 +9,7 @@ To work in a sandboxed Python environment it is recommended to install the app i
 1. Install dependencies
 
     ```bash
-    $ cd /path/to/assignment_redis
+    $ cd /path/to/Redis-implementation
     $ pip install -r requirements.txt
     ```
 
